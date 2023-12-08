@@ -18,7 +18,6 @@ function sapinConsole(number){
 }
 
 function sapinHtml(number){
-    var txt = "";
     var el = document.querySelector('.sapin-wrapper');
     
     number += 1
