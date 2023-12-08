@@ -4,9 +4,7 @@ function sapinConsole(number){
         for(i=1;i<=number;i++){ // Nombre de ligne vertical
             txt = "";
 
-            for(j=i;j<number;j++){ //Ajoute des espaces devant
-                txt += " ";
-            }
+            txt+=" ".repeat(number-i)  //Ajoute des espaces devant
 
             txt = txt +"/" // Ajoute un slash devant à chaque tour de boucle
 
@@ -25,10 +23,9 @@ function sapinHtml(number){
     
     number += 1
     for(i=1;i<=number;i++){
-        for(j=i;j<number;j++){  el.innerHTML+="&ensp;" }
-
+        el.innerHTML+="&ensp;".repeat(number-i)
         el.innerHTML+="/"
-
+  
         for(k=0;k<(i*2)-1;k++){
             var span = document.createElement('span');
             span.innerHTML = "*"
@@ -42,4 +39,4 @@ function sapinHtml(number){
 
 
 sapinConsole(4)
-sapinHtml(40)
+sapinHtml(1)
