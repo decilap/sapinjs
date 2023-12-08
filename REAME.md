@@ -1,0 +1,1 @@
+Coucou install ce server sur ton pc https://en.parceljs.org/getting_started.html
