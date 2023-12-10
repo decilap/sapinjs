@@ -1,3 +1,5 @@
+var logo = require("./images/neige.gif")
+
 function sapinConsole(number){
     var txt = "";
     number += 1 // ajoute 1 au parametre
@@ -22,20 +24,21 @@ function sapinHtml(number){
     
     number += 1
     for(i=1;i<=number;i++){
-        el.innerHTML+="&ensp;".repeat(number-i)
-        el.innerHTML+="/"
+        //el.innerHTML+="&ensp;".repeat(number-i)
+        el.innerHTML+="<span class='slash'>/</span>"
   
         for(k=0;k<(i*2)-1;k++){
             var span = document.createElement('span');
             span.innerHTML = "*"
+            span.className = "etoile"
             el.appendChild(span)
         }
 
-        el.innerHTML+="\\"
+        el.innerHTML+="<span class='antislash'>\\</span>"
         el.append(document.createElement("br"))
     }
 }
 
-
+  
 sapinConsole(4)
 sapinHtml(40)

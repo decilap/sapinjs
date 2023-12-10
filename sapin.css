@@ -1,6 +1,51 @@
-span{
+
+body {
+    background-color: #2c3e50;
+}
+
+.etoile{
     color: green;
 }
-span:nth-child(2n-2) {
-    color: gold;
+.etoile:nth-child(2n-2) {
+    text-shadow: #f8e287 2px 2px 10px;
+    color: #f8e287;
+    animation: clic 2s infinite;
 }
+
+.sapin-header{
+    text-align: center;
+}
+
+.sapin-wrapper{
+    text-align: center;
+}
+
+.slash{
+    position: absolute;
+    transform: rotate(-153deg);
+    margin-left: -8px ;
+    color: green;
+}
+
+.antislash{
+    position: absolute;
+    transform: rotate(153deg);
+    margin-left: 3px ;
+    color: green;
+}
+
+
+@keyframes clic {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
