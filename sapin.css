@@ -11,6 +11,13 @@ body {
     animation: clic 2s infinite;
 }
 
+.sapin{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100vh;
+}
+
 .sapin-header{
     text-align: center;
 }
