@@ -1,0 +1,70 @@
+body, html{
+    min-height: 100%;
+}
+
+
+.snow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+
+body{
+    background: url(images/30053306-neigeux-foret-grand-des-arbres-couvert-de-neige-sol-et-bleu-ciel-gratuit-photo.jpeg) center center;
+    background-size: cover;
+}
+
+.snow__layer{
+    position: absolute;
+    left: -100px;
+    right: -100px;
+    animation: wind 1s cubic-bezier(0.73, 0, 0.57, 1.02) infinite alternate;
+}
+
+.snow__layer::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2000px;
+    background: url(images/show-ligth.webp);
+    animation: fallrigth 10s linear infinite;
+    transform: translateZ(50px);
+}
+
+.snow__layer:nth-child(1){
+  animation-duration: 35s;
+
+}
+
+
+.snow__layer:nth-child(1)::after{
+    background: url(images/snow-blur.png);
+    transform: translateZ(25);
+    animation-name: fallblur;
+
+}
+
+
+@keyframes fall {
+    from{
+        transform: translateY(-1000px);
+    }
+}
+
+@keyframes fallblur {
+    from{
+        transform: translateY(-1000px) translateZ(25px);
+    }
+}
+
+@keyframes fallrigth {
+    from{
+        transform: translateY(-1000px) translateZ(50px);
+    }
+}
