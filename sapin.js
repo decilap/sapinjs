@@ -1,4 +1,3 @@
-var logo = require("./images/neige.gif")
 
 function sapinConsole(number){
     var txt = "";
